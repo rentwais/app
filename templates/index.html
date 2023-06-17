@@ -1,0 +1,227 @@
+{% extends 'layout.html' %}
+
+{% block title %}Consulta de predicción de precio{% endblock %}
+
+{% block content %}
+
+    <h1>Consulta de Predicción de Precio</h1>
+
+
+    <form action="/predict" method="post">
+
+        <div class="main-form">
+
+            <div class="form-row ">
+                <label for="localidad" class="biginput" tabindex="1">
+                    Barrio:
+
+                    <select class="biginput" name="localidad" id="localidad" required autocomplete>
+                        <option value="12deoctubre-orcasur">12 de Octubre-Orcasur</option>
+                        <option value="abrantes">Abrantes</option>
+                        <option value="acacias">Acacias</option>
+                        <option value="adelfas">Adelfas</option>
+                        <option value="alamedadeosuna">Alameda de Osuna</option>
+                        <option value="almagro">Almagro</option>
+                        <option value="almendrales">Almendrales</option>
+                        <option value="ambroz">Ambroz</option>
+                        <option value="amposta">Amposta</option>
+                        <option value="arapiles">Arapiles</option>
+                        <option value="aravaca">Aravaca</option>
+                        <option value="arcos">Arcos</option>
+                        <option value="argüelles">Argüelles</option>
+                        <option value="arroyodelfresno">Arroyo del fresno</option>
+                        <option value="atalaya">Atalaya</option>
+                        <option value="barriodesalamanca">Barrio de salamanca</option>
+                        <option value="bellasvistas">Bellasvistas</option>
+                        <option value="berruguete">Berruguete</option>
+                        <option value="buenavista">Buenavista</option>
+                        <option value="butarque">Butarque</option>
+                        <option value="campodelasnaciones-corralejos">Campo de las Naciones - Corralejos</option>
+                        <option value="canillejas">Canillejas</option>
+                        <option value="casadecampo">Casa de Campo</option>
+                        <option value="cascohistóricodebarajas">Casco histórico de Barajas</option>
+                        <option value="cascohistóricodevallecas">Casco histórico de Vallecas</option>
+                        <option value="cascohistóricodevicálvaro">Casco histórico de Vicálvaro</option>
+                        <option value="castellana">Castellana</option>
+                        <option value="chamartín">Chamartín</option>
+                        <option value="chamberí">Chamberí</option>
+                        <option value="chopera">Chopera</option>
+                        <option value="chuecajusticia">Chueca-Justicia</option>
+                        <option value="ciudadlineal">Ciudad lineal</option>
+                        <option value="ciudaduniversitaria">Ciudad universitaria</option>
+                        <option value="colina">Colina</option>
+                        <option value="comillas">Comillas</option>
+                        <option value="concepción">Concepción</option>
+                        <option value="condeorgaz-piovera">Conde Orgaz-Piovera</option>
+                        <option value="costillares">Costillares</option>
+                        <option value="cuatrocaminos">Cuatro Caminos</option>
+                        <option value="cuzco-castillejos">Cuzco-Castillejos</option>
+                        <option value="delicias">Delicias</option>
+                        <option value="elcañaveral">El cañaveral</option>
+                        <option value="elpardo">El pardo</option>
+                        <option value="elplantío">El plantío</option>
+                        <option value="ensanchedevallecas-lagavia">Ensanche de Vallecas-Lagavia</option>
+                        <option value="entrevías">Entrevías</option>
+                        <option value="estrella">Estrella</option>
+                        <option value="fontarrón">Fontarrón</option>
+                        <option value="fuentedelberro">Fuente del berro</option>
+                        <option value="fuentelarreina">Fuentelarreina</option>
+                        <option value="gaztambide">Gaztambide</option>
+                        <option value="goya">Goya</option>
+                        <option value="guindalera">Guindalera</option>
+                        <option value="hellín">Hellín</option>
+                        <option value="horcajo">Horcajo</option>
+                        <option value="huertas-cortes">Huertas-Cortes</option>
+                        <option value="ibiza">Ibiza</option>
+                        <option value="imperial">Imperial</option>
+                        <option value="jerónimos">Jerónimos</option>
+                        <option value="lapaz">Lapaz</option>
+                        <option value="lastablas">Las tablas</option>
+                        <option value="lavapiés-embajadores">Lavapiés-Embajadores</option>
+                        <option value="legazpi">Legazpi</option>
+                        <option value="lista">Lista</option>
+                        <option value="losrosales">Los rosales</option>
+                        <option value="losángeles">Los ángeles</option>
+                        <option value="malasaña-universidad">Malasaña-Universidad</option>
+                        <option value="marroquina">Marroquina</option>
+                        <option value="medialegua">Medialegua</option>
+                        <option value="mirasierra">Mirasierra</option>
+                        <option value="montecarmelo">Montecarmelo</option>
+                        <option value="moscardó">Moscardó</option>
+                        <option value="niñojesús">Niño Jesús</option>
+                        <option value="nuevosministerios-ríosrosas">Nuevos Ministerios-Ríos Rosas</option>
+                        <option value="numancia">Numancia</option>
+                        <option value="opañel">Opañel</option>
+                        <option value="orcasitas">Orcasitas</option>
+                        <option value="pacífico">Pacífico</option>
+                        <option value="palacio">Palacio</option>
+                        <option value="palomas">Palomas</option>
+                        <option value="palomerasbajas">Palomeras Bajas</option>
+                        <option value="palomerassureste">Palomeras Sureste</option>
+                        <option value="palosdemoguer">Palos de moguer</option>
+                        <option value="paudecarabanchel">Pau de carabanchel</option>
+                        <option value="pavones">Pavones</option>
+                        <option value="peñagrande">Peñagrande</option>
+                        <option value="pilar">Pilar</option>
+                        <option value="pinardelrey">Pinar del Rey</option>
+                        <option value="portazgo">Portazgo</option>
+                        <option value="pradolongo">Pradolongo</option>
+                        <option value="prosperidad">Prosperidad</option>
+                        <option value="pueblonuevo">Pueblo nuevo</option>
+                        <option value="puentedevallecas">Puente de vallecas</option>
+                        <option value="puertabonita">Puerta bonita</option>
+                        <option value="quintana">Quintana</option>
+                        <option value="recoletos">Recoletos</option>
+                        <option value="rejas">Rejas</option>
+                        <option value="rosas">Rosas</option>
+                        <option value="salvador">Salvador</option>
+                        <option value="sanblas">San Blas</option>
+                        <option value="sanchinarro">Sanchinarro</option>
+                        <option value="sancristóbal">San Cristóbal</option>
+                        <option value="sandiego">San Diego</option>
+                        <option value="sanfermín">San Fermín</option>
+                        <option value="sanisidro">San Isidro</option>
+                        <option value="sanjuanbautista">San Juan Bautista</option>
+                        <option value="sanpascual">San Pascual</option>
+                        <option value="simancas">Simancas</option>
+                        <option value="sol">Sol</option>
+                        <option value="tetuán">Tetuán</option>
+                        <option value="timón">Timón</option>
+                        <option value="trafalgar">Trafalgar</option>
+                        <option value="tresolivos-valverde">Tres Olivos-Valverde</option>
+                        <option value="valdeacederas">Valdeacederas</option>
+                        <option value="valdebebas-valdefuentes">Valdebebas-Valdefuentes</option>
+                        <option value="valdebernardo-valderrivas">Valdebernardo-Valderrivas</option>
+                        <option value="valdemarín">Valdemarín</option>
+                        <option value="valdezarza">Valdezarza</option>
+                        <option value="vallehermoso">Vallehermoso</option>
+                        <option value="ventas">Ventas</option>
+                        <option value="ventilla-almenara">Ventilla-Almenara</option>
+                        <option value="vicálvaro">Vicálvaro</option>
+                        <option value="villadevallecas">Villa de vallecas</option>
+                        <option value="villaverdealto">Villaverde alto</option>
+                        <option value="vinateros">Vinateros</option>
+                        <option value="virgendelcortijo-manoteras">Virgen del cortijo-Manoteras</option>
+                        <option value="vistaalegre">Vista Alegre</option>
+                        <option value="zofío">Zofío</option>
+                    </select>
+                </label>
+            </div>
+
+
+            <div class="form-row">
+                <label for="tipovivienda">Tipo Vivienda:
+                    <select name="tipovivienda" id="tipovivienda" tabindex="2">
+                        <option name="Piso">Piso</option>
+                        <option name="Dúplex">Dúplex</option>
+                        <option name="Estudio">Estudio</option>
+                        <option name="Ático">Ático</option>
+                        <option name="nan">Otro</option>
+                    </select>
+                </label>
+
+                <label for="calefaccion">Calefacción:
+                    <select name="calefaccion" id="calefaccion" tabindex="3">
+                        <option name="individual">Individual</option>
+                        <option name="central">Central</option>
+                        <option name="0">No</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row ">
+                <label for="planta">Planta: 
+                    <input type="number" name="planta" id="planta" required  tabindex="4" min="0" max="40" placeholder="1">
+                </label>
+                <label for="metros">Metros: (m²)
+                    <input type="number" name="metros" id="metros" required tabindex="5" min="10" max="290" placeholder="75">
+                </label>
+                <label for="habitaciones">Habitaciones:
+                    <input type="number" name="habitaciones" id="habitaciones" required tabindex="6" min="0" max="15" placeholder="3">
+                </label>
+                <label for="banos">Baños:
+                    <input type="number" name="banos" id="banos" required tabindex="7" min="1" max="5" placeholder="1">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label for="ascensor">Ascensor:
+                    <select name="ascensor" id="ascensor" tabindex="8">
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </label>
+
+                <label for="aire_acondicionado"><abbr title="Aire Acondicionado">A/A</abbr>:
+                    <select name="aire_acondicionado" id="aire_acondicionado" tabindex="9">
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </label>
+
+
+                <label for="exterior">Exterior:
+                    <select name="exterior" id="exterior" tabindex="10">
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </label>
+
+                <label for="amueblada">Amueblada:
+                    <select name="amueblada" id="amueblada" tabindex="11">
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </label>
+            </div>
+
+
+
+        </div>
+
+
+
+        <input type="submit" value="Consultar" class="cta">
+    </form>
+
+{% endblock %}
