@@ -18,7 +18,7 @@ Se ha desarrollado un modelo de aprendizaje automático para predecir los precio
 
 __Este repositorio contiene la aplicación web en Flask que sirve para consultar estimaciones al modelo. Si busca el modelo está en el repositorio [/rentwais/model](https://github.com/rentwais/model).__
 
-También se puede consultar más información en el [artículo de Medium](https://medium.com/@javier.lr/rentwais-predicción-de-precio-de-alquiler-de-vivienda-d6c6b8a7214f).
+También puede consultar más información en el [artículo de Medium](https://medium.com/@javier.lr/rentwais-predicción-de-precio-de-alquiler-de-vivienda-d6c6b8a7214f).
 
 
 ---
