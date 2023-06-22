@@ -1,11 +1,13 @@
 # Importa las bibliotecas y funciones necesarias
 from flask import Flask, render_template, request
-from sklearn.preprocessing import OneHotEncoder
 import pickle as cPickle
 import numpy as np
 import datetime
 # Importa archivo con datos aparte para no incluirlos en este principal
 from configData import *
+
+# numero de parametros de entrada del modelo. 
+numero_parametros = 167
 
 # inicializamos el framework
 app = Flask(__name__)

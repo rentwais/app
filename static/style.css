@@ -13,8 +13,6 @@
     --border-radius:8px;
     --border-radius-small:4px;
     --shadow:0px 10px 24px -1px rgba(0,0,0,.75);
-    /* --shadow-cta:0px 6px 12px -1px rgba(117, 117, 117, 0.75); */
-    /* --shadow-down:0px 3px 6px -1px rgba(117, 117, 117, 0.75); */
     --shadow-cta:0px 6px 12px -1px rgba(0,0,0, 0.75);
     --shadow-cta-down:0px 3px 6px -1px rgba(0,0,0, 0.75);
 }
@@ -40,18 +38,22 @@ h1 {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: top;
+    height: fit-content;
 }
 
 .panel {
-    width: 50rem;
+    width: 100%;
     background-color: var(--primario-muy-claro);
     padding: 1.6rem 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
+}
+
+.logo{
+    width: auto;
 }
 
 /* Oculta las flechas de input number */
@@ -120,10 +122,6 @@ select:focus, input:focus {
 }
 
 
-
-
-
-
 .result{
     text-align: center;
 } 
@@ -145,12 +143,28 @@ a:hover{
 }
 
 .panel_footer{
-    /* text-align: right; */
     display: flex;
     justify-content: space-between;
-
 }
+
 .panel_footer small{
     font-size: 14px;
     color: #999;
+}
+
+@media screen and (min-width:800px) {
+    .panel {
+        width: 50rem;
+        margin: auto;
+    }
+    .container{
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:432px) {
+    .logo{
+        width: 100%;
+    }
 }

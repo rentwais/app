@@ -1,8 +1,6 @@
 # Este archivo contiene variables necesarias en app.py
 # es necesario importar este archivo para poder disponer de estos datos
 
-numero_parametros = 168
-
 # localidad
 barrios = {
     'palacio':'centro',
